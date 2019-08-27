@@ -455,4 +455,6 @@
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
     
+    <!-- Whether device has a notch -->
+    <bool name="config_haveNotch">true</bool>
 </resources>
