@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-** Copyright 2015, The Android Open Source Project
+** Copyright 2017, The Android Open Source Project
 **
 ** Licensed under the Apache License, Version 2.0 (the "License");
 ** you may not use this file except in compliance with the License.
@@ -25,4 +25,7 @@
     <!-- Burn in protection -->
     <bool name="config_statusBarBurnInProtection">true</bool>
     <integer name="config_shift_interval">15</integer>
+
+    <!-- Doze: check proximity sensor before pulsing? -->
+    <bool name="doze_proximity_check_before_pulse">false</bool>
 </resources>
