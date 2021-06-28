@@ -448,4 +448,8 @@
         H 0
         Z
     </string>
+    
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
+    
 </resources>
