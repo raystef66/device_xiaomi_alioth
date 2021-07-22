@@ -38,6 +38,8 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.util.Log;
 
+import io.github.maytinhdibo.pocket.receiver.PhoneStateReceiver;
+
 public class PocketService extends Service {
     private static final String TAG = "PocketMode";
     private static final boolean DEBUG = true;
@@ -134,14 +136,16 @@ public class PocketService extends Service {
             //check if the sensor type is proximity sensor.
             if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
                 if (event.values[0] == 0) {
-                    //stop block turn on after 15 seconds
-                    if (!(isFirstChange && (System.currentTimeMillis() - lastBlock < 15000 && lastBlock != -1))) {
-                        if (DEBUG) Log.d(TAG, "NEAR, disable sensor and turn screen off");
-                        disableSensor();
-                        PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
-                        if (pm != null) {
-                            pm.goToSleep(SystemClock.uptimeMillis());
-                            lastBlock = System.currentTimeMillis();
+                    if(PhoneStateReceiver.CUR_STATE == PhoneStateReceiver.IDLE){
+                        //stop block turn on after 15 seconds
+                        if (!(isFirstChange && (System.currentTimeMillis() - lastBlock < 15000 && lastBlock != -1))) {
+                            if (DEBUG) Log.d(TAG, "NEAR, disable sensor and turn screen off");
+                            disableSensor();
+                            PowerManager pm = (PowerManager) mContext.getSystemService(Context.POWER_SERVICE);
+                            if (pm != null) {
+                                pm.goToSleep(SystemClock.uptimeMillis());
+                                lastBlock = System.currentTimeMillis();
+                            }
                         }
                     }
                 } else {
