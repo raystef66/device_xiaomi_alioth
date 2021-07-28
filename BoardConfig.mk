@@ -28,6 +28,9 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
+
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
