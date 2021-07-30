@@ -18,4 +18,12 @@
         devices will be able to vary their amplitude but do not possess enough dynamic range to
         have distinct intensity levels -->
     <bool name="config_vibration_supports_multiple_intensities">true</bool>
+
+    <!-- Defines the location of the fingerprint sensor on the device
+         0 = back
+         1 = front
+         2 = left side
+         3 = right side
+    -->
+    <integer name="config_fingerprintSensorLocation">3</integer>
 </resources>
