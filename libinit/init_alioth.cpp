@@ -6,8 +6,8 @@
 
 #include <libinit_kona.h>
 
-#define DESCRIPTION "redfin-user 11 RQ3A.210705.001 7380771 release-keys"
-#define FINGERPRINT "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys"
+#define DESCRIPTION "redfin-user 11 RQ3A.210805.001 7474174 release-keys"
+#define FINGERPRINT "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys"
 
 static const variant_info_t aliothcn_info = {
     .hwc_value = "CN",
