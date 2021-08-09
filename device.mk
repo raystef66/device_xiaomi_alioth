@@ -43,10 +43,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-lineage
 
-# PartsBin
-PRODUCT_PACKAGES += \
-    PartsBin
- 
 # Pocket Mode
 PRODUCT_PACKAGES += \
     PocketMode
