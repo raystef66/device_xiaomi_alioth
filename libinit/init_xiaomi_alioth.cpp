@@ -4,7 +4,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <libinit_kona.h>
+#include <libinit_dalvik_heap.h>
+#include <libinit_variant.h>
+
+#include "vendor_init.h"
 
 #define DESCRIPTION "redfin-user 11 RQ3A.210805.001.A1 7474174 release-keys"
 #define FINGERPRINT "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys"
