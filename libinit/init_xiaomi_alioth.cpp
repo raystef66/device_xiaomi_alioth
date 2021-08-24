@@ -4,9 +4,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <libinit_kona.h>
+#include <libinit_dalvik_heap.h>
+#include <libinit_variant.h>
 
-#define DESCRIPTION "redfin-user 11 RQ3A.210805.001 7474174 release-keys"
+#include "vendor_init.h"
+
 #define FINGERPRINT "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys"
 
 static const variant_info_t aliothcn_info = {
@@ -17,7 +19,6 @@ static const variant_info_t aliothcn_info = {
     .device = "alioth",
     .marketname = "K40",
     .model = "M2012K11AC",
-    .build_description = DESCRIPTION,
     .build_fingerprint = FINGERPRINT,
 
     .nfc = true,
@@ -31,7 +32,6 @@ static const variant_info_t aliothin_info = {
     .device = "aliothin",
     .marketname = "Mi 11X",
     .model = "M2012K11AI",
-    .build_description = DESCRIPTION,
     .build_fingerprint = FINGERPRINT,
 
     .nfc = false,
@@ -45,7 +45,6 @@ static const variant_info_t alioth_info = {
     .device = "alioth",
     .marketname = "POCO F3",
     .model = "M2012K11AG",
-    .build_description = DESCRIPTION,
     .build_fingerprint = FINGERPRINT,
 
     .nfc = true,
