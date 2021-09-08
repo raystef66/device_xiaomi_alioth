@@ -9,8 +9,8 @@
 
 #include "vendor_init.h"
 
-#define DESCRIPTION "redfin-user 11 RQ3A.210805.001.A1 7474174 release-keys"
-#define FINGERPRINT "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys"
+#define DESCRIPTION "alioth_global-user 11 RKQ1.200826.002 V12.5.3.0.RKHMIXM release-keys"
+#define FINGERPRINT "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys"
 
 static const variant_info_t aliothcn_info = {
     .hwc_value = "CN",
