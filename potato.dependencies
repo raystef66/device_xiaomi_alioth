@@ -5,6 +5,7 @@
   },
   {
     "repository": "vendor_xiaomi_alioth",
-    "target_path": "vendor/xiaomi/alioth"
+    "target_path": "vendor/xiaomi/alioth",
+    "remote" : "devices-lab"
   }
 ]
