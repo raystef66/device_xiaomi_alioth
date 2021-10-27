@@ -91,20 +91,6 @@ vendor/firmware/cs35l41-dsp1-spk-prot-RCV-revb2.bin
 vendor/firmware/cs35l41-dsp1-spk-prot-revb2.bin
 vendor/firmware/cs35l41-dsp1-spk-prot-revb2.wmfw
 
-# Audio (configs)
-vendor/etc/audio_configs.xml
-vendor/etc/audio_configs_stock.xml
-vendor/etc/audio_effects.conf
-vendor/etc/audio_effects.xml
-vendor/etc/audio_io_policy.conf
-vendor/etc/audio_platform_info_intcodec.xml
-vendor/etc/audio_policy_volumes.xml
-vendor/etc/audio_tuning_mixer.txt
-vendor/etc/mixer_paths.xml
-vendor/etc/mixer_paths_overlay_dynamic.xml
-vendor/etc/sound_trigger_mixer_paths.xml
-vendor/etc/sound_trigger_platform_info.xml
-
 # Camera
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
