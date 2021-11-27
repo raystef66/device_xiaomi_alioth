@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/potato_alioth.mk
+    $(LOCAL_DIR)/lineage_alioth.mk
 
 COMMON_LUNCH_CHOICES := \
-    potato_alioth-user \
-    potato_alioth-userdebug \
-    potato_alioth-eng
+    lineage_alioth-user \
+    lineage_alioth-userdebug \
+    lineage_alioth-eng
