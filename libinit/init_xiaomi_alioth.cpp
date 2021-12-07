@@ -10,7 +10,7 @@
 #include "vendor_init.h"
 
 #define DESCRIPTION "alioth_global-user 11 RKQ1.200826.002 V12.5.3.0.RKHMIXM release-keys"
-#define FINGERPRINT "google/redfin/redfin:12/SP1A.210812.015/7679548:user/release-keys"
+#define FINGERPRINT "google/redfin/redfin:12/SQ1A.211205.008/7888514:user/release-keys"
 
 static const variant_info_t aliothcn_info = {
     .hwc_value = "CN",
