@@ -26,4 +26,7 @@
          3 = right side
     -->
     <integer name="config_fingerprintSensorLocation">3</integer>
+    
+    <!-- Custom pickup sensor for doze customization -->
+    <string name="pickup_sensor" translatable="false">xiaomi.sensor.pickup</string>
 </resources>
