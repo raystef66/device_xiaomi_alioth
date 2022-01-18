@@ -493,5 +493,8 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+	
+    <!-- Pocket Lock -->
+    <bool name="config_pocketModeSupported">false</bool>
 
 </resources>
