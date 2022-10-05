@@ -36,3 +36,16 @@ ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.paneltype=2
 vendor.display.defer_fps_frame_count=2
+
+#Set fcc_main to 400mA to avoid the risk of vph_pwr droop
+persist.vendor.cp.fcc_main_ua=400000
+
+#In the taper mode, low voltage charging
+persist.vendor.cp.taper_term_mv=7000
+
+#set vfloat_offset_uv
+persist.vendor.cp.qc3p5_vfloat_offset_uv=110000
+
+#disable hvdcp_opti deamon pps control
+persist.vendor.pps.disallowed=1
+persist.vendor.hvdcp_opti.disallowed=1
