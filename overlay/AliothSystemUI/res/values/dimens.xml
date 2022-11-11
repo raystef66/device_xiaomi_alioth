@@ -18,5 +18,8 @@
 
     <!-- the padding on the top of the statusbar (usually 0) -->
     <dimen name="status_bar_padding_top">1px</dimen>
+	
+    <!-- Burn-in protection -->
+    <dimen name="burnin_protection_horizontal_shift">1dp</dimen>
 
 </resources>
