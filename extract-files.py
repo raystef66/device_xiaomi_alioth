@@ -28,11 +28,6 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/lib64/camera/components/com.mi.node.watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
-    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
-        .binary_regex_replace(
-            b'\x73\x74\x5F\x6C\x69\x63\x65\x6E\x73\x65\x2E\x6C\x69\x63',
-            b'\x63\x61\x6D\x65\x72\x61\x5F\x63\x6E\x66\x2E\x74\x78\x74',
-        ),
     (
         'vendor/lib64/libalAILDC.so',
         'vendor/lib64/libalLDC.so',
