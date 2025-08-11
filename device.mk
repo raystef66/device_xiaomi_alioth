@@ -26,6 +26,9 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     libpiex_shim
 
+# Libinit
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):init_xiaomi_alioth)
+
 # Miui Camera
 include device/xiaomi/camera/miuicamera.mk
 
