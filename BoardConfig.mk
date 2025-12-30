@@ -19,7 +19,7 @@ TARGET_SCREEN_DENSITY := 440
 TARGET_RECOVERY_DEVICE_MODULES := init_xiaomi_alioth
 
 # Kernel
-TARGET_KERNEL_CONFIG := alioth_defconfig
+TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
 
 # OTA assert
 TARGET_OTA_ASSERT_DEVICE := alioth,aliothin
