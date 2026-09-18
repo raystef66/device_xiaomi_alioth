@@ -77,8 +77,6 @@
     <ctl name="RCV Boost Class-H Tracking Enable" value="1" />
     <ctl name="RCV Boost Target Voltage" value="0" />
     <!-- smart PA end -->
-    <ctl name="COMP1 Switch" value="0" />
-    <ctl name="COMP2 Switch" value="0" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
     <!-- Multimode Voice1 -->
@@ -281,7 +279,6 @@
     </path>
 
     <path name="compress-voip-call speaker">
-        <ctl name="VOIP_EXT_EC MUX" value="TERT_TDM_TX_0" />
         <ctl name="TERT_TDM_RX_0_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer TX_CDC_DMA_TX_3_Voip" value="1" />
     </path>
@@ -824,23 +821,15 @@
         <ctl name="RCV ASPRX1 Slot Position" value="0" />
         <ctl name="RCV ASPRX2 Slot Position" value="2" />
         <ctl name="RCV ASPTX Ref" value="Ref" />
-        <ctl name="Cirrus SP Usecase Config" value="None" />
     </path>
 
-    <path name="ultrasound-cover1">
-        <!--  mixer controls for RX use-case  -->
-    </path>
 
-    <path name="ultrasound-cover1-output">
-        <!--  mixer controls for RX use-case  -->
-    </path>
 
-    <path name="ultrasound-cover1-output handset">
-    </path>
 
-    <path name="ultrasound-cover1-input">
-        <!--  mixer controls for TX use-case  -->
-    </path>
+
+
+
+
 
     <path name="ultrasound-rampdown">
         <!--ctl name="Mi_Ultrasound RampDown" value="On"/-->
@@ -894,7 +883,6 @@
        <ctl name="RCV ASPRX1 Slot Position" value="0" />
        <ctl name="RCV ASPRX2 Slot Position" value="2" />
        <ctl name="RCV ASPTX Ref" value="Ref" />
-       <ctl name="Cirrus SP Usecase Config" value="None" />
        <ctl name="Mi_Ultrasound Rx Device" value="1"/>
     </path>
 
@@ -964,7 +952,6 @@
         <ctl name="RCV ASPTX Ref" value="Ref" />
         <ctl name="RCV PCM Source" value="DSP" />
         <ctl name="RCV AMP PCM Gain" value="3" />
-        <ctl name="Cirrus SP Usecase Config" value="None" />
         <ctl name="RCV Fast Use Case Delta File" value="rcv_voice_delta.txt"/>
         <ctl name="RCV Boost Class-H Tracking Enable" value="0" />
         <ctl name="RCV Boost Target Voltage" value="50" />
@@ -1037,9 +1024,24 @@
     </path>
 
     <path name="voice-headphones">
-        <path name="headphones" />
-        <ctl name="COMP1 Switch" value="0" />
-        <ctl name="COMP2 Switch" value="0" />
+        <!-- Inline headphones: overlay paths must not nest. -->
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+        <ctl name="RX_MACRO RX1 MUX" value="AIF1_PB" />
+        <ctl name="RX_CDC_DMA_RX_0 Channels" value="Two" />
+        <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <ctl name="RX INT1_1 MIX1 INP0" value="RX1" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="RX INT1 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
+        <ctl name="RX HPH Mode" value="CLS_H_LOHIFI" />
+        <ctl name="RX_COMP1 Switch" value="0" />
+        <ctl name="RX_COMP2 Switch" value="0" />
+        <ctl name="HPHL_COMP Switch" value="0" />
+        <ctl name="HPHR_COMP Switch" value="0" />
+        <ctl name="HPHL Volume" value="20" />
+        <ctl name="HPHR Volume" value="20" />
+        <ctl name="HPHL_RDAC Switch" value="1" />
+        <ctl name="HPHR_RDAC Switch" value="1" />
         <ctl name="HPHL Volume" value="20" />
         <ctl name="HPHR Volume" value="20" />
     </path>
@@ -1062,8 +1064,6 @@
         <ctl name="HPHR Volume" value="20" />
         <ctl name="HPHL_RDAC Switch" value="1" />
         <ctl name="HPHR_RDAC Switch" value="1" />
-        <ctl name="COMP1 Switch" value="0" />
-        <ctl name="COMP2 Switch" value="0" />
     </path>
 
     <path name="hph-lowpower-mode">
