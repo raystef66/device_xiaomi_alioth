@@ -30,6 +30,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/display_id_4630946736638489729.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946736638489729.xml
 
+# Health: device-local Android polarity conversion; QTI kernel ABI is unchanged.
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.alioth \
+    android.hardware.health-service.alioth_recovery
+
 # Init
 $(call soong_config_set,xiaomi_kona,variant_lib,//$(LOCAL_PATH):libvariant_xiaomi_alioth)
 
