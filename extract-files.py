@@ -17,6 +17,10 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    # restrict_chg is owned by init.xiaomi.rc, not the stock charging helper.
+    'vendor/bin/init.qti.chg_policy.sh': blob_fixup()
+        .regex_replace(r'(find /sys/class/qcom-battery/ -type f -maxdepth 1)( \|)',
+                       r'\1 ! -name restrict_chg\2'),
     'vendor/etc/init/init.batterysecret.rc': blob_fixup()
         .regex_replace('.*seclabel u:r:batterysecret:s0\n', ''),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
