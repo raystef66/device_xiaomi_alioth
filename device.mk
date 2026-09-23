@@ -47,12 +47,17 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
-    ApertureOverlayDevice \
     FrameworkResOverlayDevice \
-    LineageDialerOverlayDevice \
     LineageSettingsOverlayDevice \
     LineageSystemUIOverlayDevice \
     SystemUIOverlayDevice
+
+# This product includes MiuiCamera, which replaces Aperture.
+# Keep the Lineage Dialer overlay only for the non-GMS communications suite.
+ifneq ($(WITH_GMS_COMMS_SUITE),true)
+PRODUCT_PACKAGES += \
+    LineageDialerOverlayDevice
+endif
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
