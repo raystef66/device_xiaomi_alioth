@@ -4,6 +4,8 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from camera_sat_fixup import fixup_sat_buffers
+
 from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
@@ -17,6 +19,8 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
+        .call(fixup_sat_buffers, need_tmp_dir=False),
     # restrict_chg is owned by init.xiaomi.rc, not the stock charging helper.
     'vendor/bin/init.qti.chg_policy.sh': blob_fixup()
         .regex_replace(r'(find /sys/class/qcom-battery/ -type f -maxdepth 1)( \|)',
