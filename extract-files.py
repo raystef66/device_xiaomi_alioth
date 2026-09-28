@@ -5,6 +5,7 @@
 #
 
 from camera_sat_fixup import fixup_sat_buffers
+from mius_poll_fixup import fixup_mius_poll_timeout
 
 from extract_utils.fixups_blob import (
     blob_fixup,
@@ -19,6 +20,8 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/lib64/sensors.mius.proximity.so': blob_fixup()
+        .call(fixup_mius_poll_timeout, need_tmp_dir=False),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
         .call(fixup_sat_buffers, need_tmp_dir=False),
     # restrict_chg is owned by init.xiaomi.rc, not the stock charging helper.
