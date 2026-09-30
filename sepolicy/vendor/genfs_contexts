@@ -1,0 +1,2 @@
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/custom_wave u:object_r:vendor_sysfs_aw8697_custom_wave:s0
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-2/2-005a/gain u:object_r:sysfs_vibrator:s0

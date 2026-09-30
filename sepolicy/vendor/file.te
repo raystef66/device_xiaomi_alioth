@@ -1,0 +1,2 @@
+# Alioth AW8697 custom waveform metadata.
+type vendor_sysfs_aw8697_custom_wave, fs_type, sysfs_type;
