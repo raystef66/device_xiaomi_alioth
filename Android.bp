@@ -6,3 +6,26 @@
 
 soong_namespace {
 }
+
+// Decode the stock camera license in the build sandbox, not during envsetup.
+genrule {
+    name: "alioth_camera_st_license_gen",
+    srcs: ["configs/camera/secret"],
+    tools: ["alioth_camera_license_decoder"],
+    out: ["st_license.lic"],
+    cmd: "$(location alioth_camera_license_decoder) $(in) $(out)",
+}
+
+prebuilt_etc {
+    name: "alioth_camera_st_license",
+    src: ":alioth_camera_st_license_gen",
+    filename: "st_license.lic",
+    sub_dir: "camera",
+    vendor: true,
+}
+
+python_binary_host {
+    name: "alioth_camera_license_decoder",
+    main: "configs/camera/decode_license.py",
+    srcs: ["configs/camera/decode_license.py"],
+}
