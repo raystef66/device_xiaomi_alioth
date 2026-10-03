@@ -1,6 +1,7 @@
-# Control AW8697 gain without granting write access to waveform metadata.
+# Control AW8697 gain.
 allow hal_vibrator_default sysfs_vibrator:file rw_file_perms;
 
-# Read custom waveform metadata and cached actuator measurements only.
-allow hal_vibrator_default vendor_sysfs_aw8697_custom_wave:file r_file_perms;
+# Submit bounded custom waveforms and read completion metadata.
+# Calibration controls remain inaccessible.
+allow hal_vibrator_default vendor_sysfs_aw8697_custom_wave:file rw_file_perms;
 allow hal_vibrator_default vendor_sysfs_f0_value:file r_file_perms;

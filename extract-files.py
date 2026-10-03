@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from aw8697_waveform_fixup import fixup_aw8697_waveform
 from camera_sat_fixup import fixup_sat_buffers
 from mius_poll_fixup import fixup_mius_poll_timeout
 
@@ -20,6 +21,11 @@ from extract_utils.main import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    (
+        'vendor/etc/vibrator/primitive_effect_1.bin',
+        'vendor/etc/vibrator/primitive_effect_2.bin',
+        'vendor/etc/vibrator/primitive_effect_7.bin',
+    ): blob_fixup().call(fixup_aw8697_waveform, need_tmp_dir=False),
     'vendor/lib64/sensors.mius.proximity.so': blob_fixup()
         .call(fixup_mius_poll_timeout, need_tmp_dir=False),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()

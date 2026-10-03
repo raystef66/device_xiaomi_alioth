@@ -505,3 +505,8 @@ vendor/etc/thermald-devices.conf
 vendor/firmware/aw8697_haptic.bin
 # Kernel boot RTP preload and oscillator-calibration sample
 vendor/firmware/aw8697_rtp_1.bin
+
+# Stock AW8697 RAM samples exported unchanged for Android primitives
+vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_1.bin
+vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_2.bin
+vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_7.bin
