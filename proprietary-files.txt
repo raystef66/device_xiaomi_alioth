@@ -510,3 +510,6 @@ vendor/firmware/aw8697_rtp_1.bin
 vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_1.bin
 vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_2.bin
 vendor/firmware/aw8697_haptic.bin:vendor/etc/vibrator/primitive_effect_7.bin
+
+# Alioth stock RichTap renderer (OS1.0.5.0.TKHMIXM)
+vendor/lib64/libaachaptics.so
