@@ -30,6 +30,10 @@ blob_fixups: blob_fixups_user_type = {
         .call(fixup_mius_poll_timeout, need_tmp_dir=False),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
         .call(fixup_sat_buffers, need_tmp_dir=False),
+    # The kernel exposes the thermal HBM guard on the primary DSI device.
+    'vendor/etc/thermald-devices.conf': blob_fixup()
+        .regex_replace('/sys/class/drm/card0-DSI-1/thermal_hbm_disabled',
+                       '/sys/devices/platform/soc/soc:qcom,dsi-display-primary/thermal_hbm_disabled'),
     # restrict_chg is owned by init.xiaomi.rc, not the stock charging helper.
     'vendor/bin/init.qti.chg_policy.sh': blob_fixup()
         .regex_replace(r'(find /sys/class/qcom-battery/ -type f -maxdepth 1)( \|)',
