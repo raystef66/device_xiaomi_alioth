@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# SurfaceFlinger scheduling is configured with work durations.
+TARGET_USES_SURFACEFLINGER_WORK_DURATIONS := true
+
 # Inherit from sm8250-common
 include device/xiaomi/sm8250-common/BoardConfigCommon.mk
 

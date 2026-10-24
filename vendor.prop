@@ -52,3 +52,12 @@ persist.vendor.fingerprint.type=side
 
 # SurfaceFlinger
 ro.surface_flinger.use_legacy_vds_refresh_pacing=true
+
+# SurfaceFlinger work budgets in nanoseconds. Keep defaults below 120 Hz.
+debug.sf.use_phase_offsets_as_durations=true
+debug.sf.late.sf.duration.120=8333333
+debug.sf.late.app.duration.120=11666666
+debug.sf.early.app.duration.120=11666666
+debug.sf.earlyGl.app.duration.120=11666666
+debug.sf.early.sf.duration.120=12333333
+debug.sf.earlyGl.sf.duration.120=12333333
