@@ -6,6 +6,7 @@
 
 from aw8697_waveform_fixup import fixup_aw8697_waveform
 from camera_sat_fixup import fixup_sat_buffers
+from camera_session_fixup import fixup_camera_session_streams
 from mius_poll_fixup import fixup_mius_poll_timeout
 
 from extract_utils.fixups_blob import (
@@ -28,6 +29,8 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup().call(fixup_aw8697_waveform, need_tmp_dir=False),
     'vendor/lib64/sensors.mius.proximity.so': blob_fixup()
         .call(fixup_mius_poll_timeout, need_tmp_dir=False),
+    'vendor/lib64/hw/camera.qcom.so': blob_fixup()
+        .call(fixup_camera_session_streams, need_tmp_dir=False),
     'vendor/lib64/hw/com.qti.chi.override.so': blob_fixup()
         .call(fixup_sat_buffers, need_tmp_dir=False),
     # The kernel exposes the thermal HBM guard on the primary DSI device.
