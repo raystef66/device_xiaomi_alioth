@@ -61,3 +61,6 @@ debug.sf.early.app.duration.120=11666666
 debug.sf.earlyGl.app.duration.120=11666666
 debug.sf.early.sf.duration.120=12333333
 debug.sf.earlyGl.sf.duration.120=12333333
+
+# Native Qualcomm game-audio protocol (not MediaTek FPSOP).
+ro.vendor.audio.game.effect.backend=qcom-qdsp
