@@ -21,7 +21,7 @@ cc_binary {
     defaults: ["alioth_health_defaults"],
     recovery: false,
     init_rc: ["android.hardware.health-service.alioth.rc"],
-    overrides: ["android.hardware.health-service.qti", "charger"],
+    overrides: ["charger"],
 }
 
 cc_binary {
@@ -30,5 +30,5 @@ cc_binary {
     vendor: false,
     recovery: true,
     init_rc: ["android.hardware.health-service.alioth_recovery.rc"],
-    overrides: ["android.hardware.health-service.qti_recovery", "charger.recovery"],
+    overrides: ["charger.recovery"],
 }
