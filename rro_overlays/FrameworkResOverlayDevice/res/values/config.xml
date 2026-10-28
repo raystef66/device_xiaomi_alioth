@@ -58,6 +58,18 @@
          config_defaultRefreshRate may be set to 0, in which case the value set for
          config_defaultPeakRefreshRate will act as the default frame rate. -->
     <integer name="config_defaultRefreshRate">0</integer>
+
+    <!-- K11A changes low-brightness luminance between 60 and 120 Hz. The stock
+         Smart FPS cutoff maps to about 55 on Android's legacy brightness scale.
+         Keep adaptive operation at 120 Hz below it, independently of ambient
+         light; explicit 60 Hz caps and power/thermal constraints still apply. -->
+    <integer-array name="config_brightnessThresholdsOfPeakRefreshRate" translatable="false">
+        <item>55</item>
+    </integer-array>
+    <integer-array name="config_ambientThresholdsOfPeakRefreshRate" translatable="false">
+        <item>-1</item>
+    </integer-array>
+    <integer name="config_defaultRefreshRateInZone">120</integer>
     <!-- Array of desired screen brightness in nits corresponding to the lux values
         in the config_autoBrightnessLevels array. As with config_screenBrightnessMinimumNits and
         config_screenBrightnessMaximumNits, the display brightness is defined as the measured
