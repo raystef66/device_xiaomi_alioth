@@ -33,6 +33,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/display/display_id_4630946736638489729.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946736638489729.xml
 
+# Face unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
 # Health: device-local Android polarity conversion; QTI kernel ABI is unchanged.
 PRODUCT_PACKAGES += \
     android.hardware.health-service.alioth \
