@@ -26,7 +26,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/etc/vibrator/primitive_effect_1.bin',
         'vendor/etc/vibrator/primitive_effect_2.bin',
         'vendor/etc/vibrator/primitive_effect_7.bin',
-        'vendor/etc/vibrator/primitive_effect_8.bin',
     ): blob_fixup().call(fixup_aw8697_waveform, need_tmp_dir=False),
     'vendor/lib64/sensors.mius.proximity.so': blob_fixup()
         .call(fixup_mius_poll_timeout, need_tmp_dir=False),
