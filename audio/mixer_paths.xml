@@ -478,7 +478,7 @@
     <ctl name="IIR0 INP3 MUX" value="ZERO" />
 
     <!-- vbat related data -->
-    <ctl name="GSM mode Enable" value="OFF" />
+    <ctl name="RX_GSM mode Enable" value="OFF" />
     <ctl name="WSA_Softclip0 Enable" value="0" />
     <ctl name="WSA_Softclip1 Enable" value="0" />
     <ctl name="WSA_RX INT0 VBAT WSA RX0 VBAT Enable" value="0" />
@@ -587,7 +587,7 @@
 
     <!-- These are audio route (FE to BE) specific mixer settings -->
     <path name="gsm-mode">
-        <ctl name="GSM mode Enable" value="ON" />
+        <ctl name="RX_GSM mode Enable" value="ON" />
     </path>
 
     <path name="echo-reference">
